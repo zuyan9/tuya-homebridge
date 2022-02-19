@@ -219,7 +219,7 @@ class TuyaPlatform {
   // Called from device classes
   registerPlatformAccessory(platformAccessory) {
     this.log.log(`Register Platform Accessory ${platformAccessory.displayName}`);
-    this.api.registerPlatformAccessories('homebridge-tuya-platform', 'TuyaPlatform', [platformAccessory]);
+    this.api.registerPlatformAccessories('homebridge-tuya-platform-feit-shop-light', 'TuyaPlatformFeitShopLight', [platformAccessory]);
   }
 
   // Function invoked when homebridge tries to restore cached accessory.
@@ -242,7 +242,7 @@ class TuyaPlatform {
   removeAccessory(accessory) {
     if (accessory) {
       this.log.log(`Remove Accessory ${accessory}`);
-      this.api.unregisterPlatformAccessories("homebridge-tuya-platform", "TuyaPlatform", [accessory]);
+      this.api.unregisterPlatformAccessories("homebridge-tuya-platform-feit-shop-light", "TuyaPlatformFeitShopLight", [accessory]);
       this.accessories.delete(accessory.uuid);
       this.deviceAccessories.delete(accessory.uuid);
     }
