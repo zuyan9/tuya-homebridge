@@ -23,7 +23,7 @@ module.exports = function (homebridge) {
   Service = homebridge.hap.Service;
   Characteristic = homebridge.hap.Characteristic;
   // registerAccessory' three parameters is plugin-name, accessory-name, constructor-name
-  homebridge.registerPlatform('homebridge-tuya-platform', 'TuyaPlatform', TuyaPlatform, true);
+  homebridge.registerPlatform('homebridge-tuya-platform-feit-shop-light', 'TuyaPlatformFeitShopLight', TuyaPlatform, true);
 }
 
 // Accessory constructor

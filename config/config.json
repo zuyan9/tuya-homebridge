@@ -1,6 +1,6 @@
 {
     "bridge": {
-        "name": "homebridge-tuya-platform",
+        "name": "homebridge-tuya-platform-feit-shop-light",
         "username": "BE:B9:AC:79:6C:CA",
         "port": 8081,
         "pin": "034-85-687"
@@ -10,8 +10,8 @@
 
     "platforms": [
         {
-            "platform": "TuyaPlatform",
-            "name": "TuyaPlatform",
+            "platform": "TuyaPlatformFeitShopLight",
+            "name": "TuyaPlatformFeitShopLight",
             "options":
               {
                 "username": "",
@@ -21,7 +21,7 @@
                 "lang": "en",
                 "projectType": "2",
                 "appSchema": "tuyaSmart",
-                "countryCode": 86,
+                "countryCode": 1,
                 "debug":false
               }
         }
