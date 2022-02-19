@@ -55,7 +55,7 @@ class LightAccessory extends BaseAccessory {
         this.tempValue = statusMap;
         var rawValue;
         var temperature;
-        rawValue = 255 - this.tempValue.value;
+        rawValue = this.tempValue.value;
         temperature = Math.floor((rawValue - this.function_dp_range.temp_range.min) * 360 / (this.function_dp_range.temp_range.max - this.function_dp_range.temp_range.min) + 140); // ra$
         if (temperature > 500) {
           temperature = 500
@@ -139,7 +139,7 @@ class LightAccessory extends BaseAccessory {
         var temperature;
         temperature = Math.floor((value - 140) * (this.function_dp_range.temp_range.max - this.function_dp_range.temp_range.min) / 360 + this.function_dp_range.temp_range.min); // value 140~500
         code = this.tempValue.code;
-        value = 255 - temperature;
+        value = temperature;
         break;
       case Characteristic.Brightness:
         {
